@@ -1,7 +1,2 @@
-local
-share
-bin
-include
-lib
-pip-selfcheck.json
+instane
 *.pyc
