@@ -22,6 +22,6 @@ Create database
 
 ```sh
 $ sqlite3 quizbuzz
-$ ^C
+$ .exit
 $ python models.py
 ```
