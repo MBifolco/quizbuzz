@@ -17,3 +17,11 @@ $ git clone git@github.com:MBifolco/quizbuzz.git
 $ cd quizbuzz
 $ pip install -r requirements.txt
 ```
+
+Create database
+
+```sh
+$ sqlite3 quizbuzz
+$ ^C
+$ python models.py
+```
