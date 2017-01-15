@@ -4,6 +4,7 @@ Flask-SocketIO==2.8.2
 itsdangerous==0.24
 Jinja2==2.9.4
 MarkupSafe==0.23
+marshmallow==2.11.1
 peewee==2.8.5
 pkg-resources==0.0.0
 python-engineio==1.1.0
