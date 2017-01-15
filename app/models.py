@@ -9,9 +9,7 @@ class BaseModel(Model):
 class Quizzes(BaseModel):
     name = CharField(unique=True)
     description = TextField()
-    create_date = DateTimeField()
-    start_date = DateTimeField()
-    status = BooleanField()
+    status = BooleanField() 
 
     class Meta:
         table = 'quizzes'
