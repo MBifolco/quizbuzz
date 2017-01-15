@@ -1,23 +1,23 @@
 from peewee import *
 
-database = SqliteDatabase('quizbuzz.db')
+database = SqliteDatabase('/opt/pythonenv/quizbuzz-env/quizbuzz/app/quizbuzz.db')
 
 class BaseModel(Model):
     class Meta:
         database = database
 
 class Quizzes(BaseModel):
-    name = CharField()
+    name = CharField(unique=True)
     description = TextField()
     create_date = DateTimeField()
     start_date = DateTimeField()
     status = BooleanField()
 
     class Meta:
-        table = 'quiz'
+        table = 'quizzes'
 
 class Users(BaseModel):
-    username = CharField()
+    username = CharField(unique=True)
     password = CharField()
     create_date = DateTimeField()
     status = BooleanField()
@@ -70,10 +70,11 @@ class Answers(BaseModel):
         table = 'answers'
 
 if __name__ == "__main__":
-    
+   
     tables = [
         Quizzes,
         Users,
+        Hosts,
         Contestants,
         Questions,
         Choices,
