@@ -20,6 +20,7 @@ def get_quizzes():
 @app.route('/quizzes/', methods=['POST'])
 def new_quiz():
     json_input = request.get_json()
+    print json_input
     quiz, errors = quiz_schema.load(json_input)
     if errors:
         return jsonify({'errors': errors}), 422
@@ -29,6 +30,6 @@ def new_quiz():
         description = quiz['description'],
         status = quiz['status']
     )
-    
+
     result = quiz_schema.dump(quiz)
     return jsonify(json_input)

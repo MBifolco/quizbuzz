@@ -1,1 +1,33 @@
-hi
+<!DOCTYPE html>
+<html>
+<head>
+<title>QuizBuzz</title>
+<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+<script src="../static/quizzbuzz.js" type="text/javascript"></script>
+</head>
+<body>
+<div style='text-align: center;font-weight: bold'>Quizzes Available</div>
+<div id='quizzes' style='text-align: center;'></div>
+<br>
+<div style='text-align: center;font-weight: bold;'>Add Quiz</div>
+<div id='add_quiz' style='text-align: center;'>
+
+Name: 
+<input type='text' name="name" id='quiz_name' class='add_quiz' style='margin-top: 1px;'><br>
+
+Description: 
+<input type='text' name="description" id='quiz_description' class='add_quiz' style='margin-top: 2px;'><br>
+
+Status:
+<select name="status" id='quiz_status' class='add_quiz' style='margin-top: 2px;'>
+    <option value='1'>Live</option>
+    <option value='0'>Not Live</option>
+</select><br>
+
+<input type='button' id='quiz_add' value='Add Quiz' style='margin-top: 2px;'>
+</div>
+</body>
+</html>
